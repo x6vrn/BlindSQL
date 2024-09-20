@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login to CTF Challenge</h1>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--ربط css -->
+
+        <!-- خطوط google fonts-->
+        <!-- code -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+
+        <!-- work sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+        <!-- ibm plex sans arabic -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+        <title>Log in</title>
+    </head>
+
+    <header>
+        <!-- بداية رأس الصفحه-->
+        <div class="header">
+            <div class="contener">
+                <h1 class="logo">Exploit.Ar</h1>
+                <ul class="links">
+                    <li><a href="/" class="up">Home</a></li>
+                    <li><a href="#" class="home">Login</a></li>
+                    <li><a href="#" class="up">Support</a></li>
+                    <li><a href="#" class="up">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- إنتهاء من رأس الصفحه -->
+    </header>
+    <!--  بداية الصفحه -->
+    <body>
+        <center>
+            <h1 class="title">Login</h1>
+        <form method="POST" action="/login">
+            <div class="login-form">
+                <h2 for="username" class="title-login">Username:</h2>
+                <input type="text" name="username" id="username" class="input" />
+                <h2 class="Passowrd" for="password">Passowrd:</h2>
+                <a href="" class="forgot">Forgot ?</a>
+                <input type="password" class="input" name="password" id="password" />
+                <h4 class="show">Show</h4>
+                <br/>
+                <button type="submit" class="Submit">Login</button>
+            </div>
+        </form>
+    </body>
+</center>
+</html>
+<style>
+    /*start config */
+*{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    background-color: #090B0C;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(226 232 240 / 50) transparent;
+    overflow-x: hidden;
+    background-image: url(/static/Group\ 11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*end config */
+/* start header */
+.header{
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    border-radius: 40px;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    backdrop-filter: blur(20px) saturate(200%);
+    z-index:1;
+}
+.contener{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.logo{
+    color: #00A2FF;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.home{
+    color: #ffffff;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    background-color: #00A2FF;
+    padding: 8px;
+    border-radius: 30px;
+}
+.up{
+    color: #ffffff;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+.links{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+/* hover header */
+.links li a {
+    color: white;
+    transition: .3s;
+}
+.up:hover {
+    color: #ffffff;
+    text-shadow:2px 2px 20px white ;
+}
+.home:hover{
+    padding-right: 15px;
+    padding-left: 15px;
+    box-shadow: rgb(0, 162, 255) 0px 2px 40px -6px;
+}
+/* end header */
+/* start page */
+.title{
+    margin-top: 150px;
+    font-size: 76px;
+    color: #E1F4FF;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.login-form{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(20px) ;
+    width: 451px;
+    height: 611px;
+    border-radius: 26px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    border: #464646 2px solid;
+}
+.login-form h2{
+    font-size: 24px;
+    margin-top: 100px;
+    font-weight: 400;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.login-form input{
+    height: 52px;
+    width: 386px;
+}
+.title-login{
+    margin-top: 100px;
+    color: #ffffff;
+    margin-right:90px ;
+    color: #00A3FF;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    transform: translate(-80px, -55px);
+}
+.input{
+    background-color: rgba(0, 0, 0, 0.062);
+    border: rgba(0, 162, 255, 1) 2px solid;
+    border-radius: 15px;
+    box-shadow: 0px 0px 90px -15px #00A2FF;
+    transition: 0.4s cubic-bezier(0.24, 0.81, 0.22, 0.81);
+    margin-top: -40px;
+    color: white;
+    font-size: 18px;
+}
+.Passowrd{
+    font-weight: 600;
+    font-size: 24px;
+    transform: translate(-133px, -20px);
+    color: #00A3FF;
+}
+.forgot{
+    transform: translate(130px, -45px);
+    color: #2F81F7;
+}
+.show{
+    transform: translate(160px, -40px);
+    color: rgba(0, 162, 255, 1);
+}
+.Submit{
+    color: #003756;
+    background-color: rgba(0, 194, 255, 1);
+    font-size: 29px;
+    border: none;
+    font-weight: 600;
+    width: 190.26px;
+    height: 60px;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 60px #00A2FF;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    transition: 0.4s cubic-bezier(0.24, 0.81, 0.22, 0.81);
+    font-weight: 900;
+    margin-top: 120px;
+}
+.input:focus{
+    transform: scale(1.1,1.1);
+    border: rgba(0, 162, 255, 1) 2px solid;
+}
+.Submit:hover{
+    transform: scale(1.1,1.1);
+}
+
+</style>
