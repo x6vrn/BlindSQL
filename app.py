@@ -3,7 +3,6 @@ import sqlite3
 
 app = Flask(__name__)
 
-# إنشاء قاعدة البيانات
 def init_db():
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
@@ -15,11 +14,9 @@ def init_db():
     conn.commit()
     conn.close()
 
-# فحص المستخدم من خلال الكوكيز
 def check_user(cookie_value):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    # استعلام SQL عرضة لـ SQL Injection
     query = f"SELECT * FROM users WHERE username = '{cookie_value}'"
     cursor.execute(query)
     result = cursor.fetchone()
@@ -36,7 +33,6 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        # تخزين الكوكي باسم المستخدم المدخل
         resp = make_response(redirect('/welcome'))
         resp.set_cookie('auth', username)
         return resp
